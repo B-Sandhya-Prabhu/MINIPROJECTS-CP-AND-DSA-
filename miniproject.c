@@ -19,6 +19,8 @@ void main()
     for(i=0;i<strlen(c);i++)
     {
         as=(int)c[i]+n;//convert the code into ASCII value and then shift the characters by number of shift 
+        if(as>122)
+        as=97+(as-122)-1;
         printf("%c",as);
     }
     }
@@ -32,6 +34,8 @@ void main()
     for(j=0;j<strlen(a);j++)
     {
         asc=(int)a[j]-m;//convert the code into ASCII value amd them shift the characters by number of shift
+        if(asc<97)
+        asc=122-(97-asc)+1;
         printf("%c ",asc);
     }
     }
